@@ -1,0 +1,179 @@
+professions_list = [
+    {
+        "image_url": "../static/images/crazed-lawyer-GettyImages-182884083-300x200.jpg",
+        "name": "კომპიუტერული მეცნიერება",
+        "text": "კომპიუტერული მეცნიერები ხშირად მუშაობენ მაღალი დონის ტექნოლოგიურ ფირმებთან, რათა შექმნან ინოვაციური პროგრამული გადაწყვეტილებები, რათა უზრუნველყონ მარტივი წვდომა ტექნოლოგიაზე და ხელი შეუწყონ წინსვლას ყველა სფეროში.",
+        "open": "compsci",
+        "id": 0
+    },
+    {
+        "image_url": "../static/images/240_F_24240658_M1Wc2w260Dq4kRGR4vCcy3JZQEZPWpBi.jpg",
+        "name": "მედიცინა",
+        "text": "მეცნიერებისა და პრაქტიკული საქმიანობის დარგი, რომელიც მიმართულია ადამიანთა ჯანმრთელობის დაცვის, დაავადებების თავიდან აცილებისა და მკურნალობის, სიცოცხლის გახანგრძლივებისაკენ",
+        "open": "medicine",
+        "id": 1
+    },
+    {
+        "image_url": "../static/images/teacher.jpg",
+        "name": "მასწავლებლობა",
+        "text": "განათლების სისტემაში პიროვნება, რომელიც სწავლის პროცესში დახმარებას უწევს, რჩევებს აძლევს მოსწავლეს და მის აღზრდაში მასწავლებელს უდიდესი როლი მიუძღვის.",
+        "open": "teaching",
+        "id": 2
+    }
+]
+
+
+univerisies_list = [
+    {
+        "image_url": "../static/images/tsu.jpg",
+        "name": "ივანე ჯავახიშვილის სახელობის თბილისის სახელმწიფო უნივერსიტეტი",
+        "text": "არ­ის მსოფ­ლიო სა­უკ­ეთ­ესო უნ­ივ­ერ­სი­ტე­ბის 1.5%-ში /U.S. News&World Report 2021/",
+        "open": "TSU",
+        "id": 0
+    },
+    {
+        "image_url": "../static/images/freeuni.jpg",
+        "name": "თავისუფალი უნივერსიტეტი",
+        "text": "უნივერსიტეტი გამოირჩევა მაღალი ხარისხის სწავლებით, კურსდამთავრებულთა დასაქმების მაღალი მაჩვენებლით და აქვს თანამედროვე სასწავლო გარემო",
+        "open": "Freeuni",
+        "id": 1
+    },
+    {
+        "image_url": "../static/images/unnamed.jpg",
+        "name": "ქუთაისის საერთაშორისო უნივერსიტეტი",
+        "text": "უნივერსიტეტის ამოცანაა მაღალკვალიფიციური სამუშაო ძალის და ადამიანური კაპიტალის მომზადება, რაც ხელს შეუწყობს საქართველოს და რეგიონის ეკონომიკურ ზრდას და განვითარებას",
+        "open": "KIU",
+        "id": 2
+    }
+]
+
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="container">
+    <input type="checkbox" id="flip">
+    <div class="cover">
+        <div class="front">
+            <img src="../static/images/course-enrollment-abstract-concept-illustration-enroll-course-apply-degree-program-add-study-plan-online-enrollment-system-registration-form-new-student_335657-3491.avif" alt="">
+            <div class="text">
+                <span class="text-1">ყოველი ახალი მეგობარი <br> ახალი თავგადასავალია</span>
+                <span class="text-2">შემოგვიერთდი</span>
+            </div>
+        </div>
+    </div>
+    <div class="forms">
+        <div class="form-content">
+            <div class="signup-form">
+                <div class="title">რეგისტრაცია</div>
+                <form action="/signup" method="POST">
+                    <div class="input-boxes">
+                        <div class="input-box">
+                            <i class="fas fa-user"></i>
+                            <input type="text" name="username" placeholder="ჩაწერე შენი სახელი" required>
+                        </div>
+                        <div class="input-box">
+                            <i class="fas fa-envelope"></i>
+                            <input type="text" name="email" placeholder="ჩაწერე შენი ელ.ფოსტა" required>
+                        </div>
+                        <div class="input-box">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" name="password" placeholder="ჩაწერე შენი პაროლი" required>
+                        </div>
+                        <div class="input-box">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" name="confirm_password" placeholder="გაიმეორე პაროლი" required>
+                        </div>
+                        <div class="button input-box">
+                            <input type="submit" value="მიღება">
+                        </div>
+                        <div class="text sign-up-text">უკვე დარეგისტრირებული ხარ? <label for="flip">Login</label></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>Signup Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* CSS styles specific to signup form */
+        /* You can place additional CSS here if needed */
+    </style>
+</head>
+<body>
+<div class="container">
+    <input type="checkbox" id="flip">
+    <div class="cover">
+        <div class="front">
+            <img src="../static/images/course-enrollment-abstract-concept-illustration-enroll-course-apply-degree-program-add-study-plan-online-enrollment-system-registration-form-new-student_335657-3491.avif" alt="">
+            <div class="text">
+                <span class="text-1">ყოველი ახალი მეგობარი <br> ახალი თავგადასავალია</span>
+                <span class="text-2">შემოგვიერთდი</span>
+            </div>
+        </div>
+    </div>
+    <div class="forms">
+        <div class="form-content">
+            <div class="signup-form">
+                <div class="title">რეგისტრაცია</div>
+                <form action="/signup" method="POST">
+                    <div class="input-boxes">
+                        <div class="input-box">
+                            <i class="fas fa-user"></i>
+                            <input type="text" placeholder="ჩაწერე შენი სახელი" required>
+                        </div>
+                        <div class="input-box">
+                            <i class="fas fa-envelope"></i>
+                            <input type="text" placeholder="ჩაწერე შენი ელ.ფოსტა" required>
+                        </div>
+                        <div class="input-box">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="ჩაწერე შენი პაროლი" required>
+                        </div>
+                        <div class="input-box">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" placeholder="გაიმეორე პაროლი" required>
+                        </div>
+                        <div class="button input-box">
+                            <input type="submit" value="მიღება">
+                        </div>
+                        <div class="text sign-up-text">უკვე დარეგისტრირებული ხარ? <label for="flip"><a href="login.html">Login</a></label></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+
+

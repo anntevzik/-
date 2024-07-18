@@ -1,0 +1,122 @@
+{% extends "base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Science Majors in Georgian Universities</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FEFAE0; /* Light beige background */
+            margin: 0;
+            padding-top: 100px; /* Adjust according to your header height */
+        }
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: calc(100vh - 200px); /* Adjust according to header and footer heights */
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            max-width: 900px;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #FEFAE0;
+            margin: 20px;
+        }
+        .text-container {
+            padding: 40px;
+            text-align: center;
+        }
+        .text-container h1 {
+            color: #283618; /* Dark green text */
+            margin-bottom: 20px;
+        }
+        .text-container p {
+            color: #606c38; /* Olive green text */
+            line-height: 1.6;
+        }
+        .text-container .highlight {
+            color: #283618; /* Dark green text */
+            font-weight: bold;
+        }
+        .image-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+        .image-container img {
+            width: 100%;
+            max-width: 640px;
+            aspect-ratio: 16 / 9; /* 16:9 aspect ratio */
+            border-radius: 10px;
+        }
+        .university-list {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #FEFAE0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .university-list h2 {
+            color: #283618; /* Dark green text */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .university-item {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .university-item:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="container">
+            <div class="text-container">
+                <h1>კომპიუტერული მეცნიერება</h1>
+                <p>კომპიუტერული მეცნიერები ხშირად მუშაობენ მაღალი დონის ტექნოლოგიურ ფირმებთან, რათა შექმნან ინოვაციური პროგრამული გადაწყვეტილებები, რათა უზრუნველყონ მარტივი წვდომა ტექნოლოგიაზე და ხელი შეუწყონ წინსვლას ყველა სფეროში. 
+                    საქართველოს უნივერსიტეტებში კომპიუტერული მეცნიერების საუკეთესო სპეციალობების შესახებ ინფორმაციის მისაღებად შეგიძლიათ მიმართოთ სხვადასხვა უნივერსიტეტის ვებგვერდებსა და რეიტინგებს. აქ არის რამდენიმე უნივერსიტეტი საქართველოში, რომლებიც ცნობილია კომპიუტერული მეცნიერების პროგრამებით:</p>
+            </div>
+            <div class="image-container">
+                <img src="../static/images/1000_F_472215471_214L52SEnbAxqezGvj3js1h3Z89yd68b.jpg" alt="Computer Science Image">
+            </div>
+            <div class="university-list">
+                <h2>საქართველოს უნივერსიტეტები</h2>
+                <div class="university-item">
+                    <h3>თბილისის თავისუფალი უნივერსიტეტი (Freeuni)</h3>
+                    <p>ცნობილია კომპიუტერული მეცნიერების ყოვლისმომცველი კურსებითა და კვლევის შესაძლებლობებით.</p>
+                </div>
+                <div class="university-item">
+                    <h3>ილიას სახელმწიფო უნივერსიტეტი (Iliauni)</h3>
+                    <p>გთავაზობთ ძლიერ კომპიუტერული მეცნიერების პროგრამებს სხვადასხვა სპეციალობით.</p>
+                </div>
+                <div class="university-item">
+                    <h3>თბილისის სახელმწიფო უნივერსიტეტი (TSU)</h3>
+                    <p>უზრუნველყოფს მძლავრი კომპიუტერული მეცნიერების საგანმანათლებლო და კვლევით დაწესებულებებს.</p>
+                </div>
+                <div class="university-item">
+                    <h3>საქართველოს ტექნიკური უნივერსიტეტი (STU)</h3>
+                    <p>გთავაზობთ საინჟინრო და კომპიუტერული მეცნიერების პროგრამების ფართო სპექტრს.</p>
+                </div>
+                <div class="university-item">
+                    <h3>კავკასიის უნივერსიტეტი (CU)</h3>
+                    <p>გთავაზობთ პროგრამებს კომპიუტერული მეცნიერების მიმართულებით პრაქტიკულ აპლიკაციებსა და ინდუსტრიულ კავშირებზე.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}

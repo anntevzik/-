@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>პროფესიები კატეგორიების მიხედვით</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #283618;
+        margin: 0;
+        padding: 20px;
+        color: #283618;
+    }
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #d5ac7c;
+    }
+    .category {
+        margin-bottom: 20px;
+        background-color: #fefae0;
+        border-radius: 8px;
+        overflow: hidden;
+        padding: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .category-title {
+        font-size: 18px;
+        color: #283618;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+    }
+    .category-title img {
+        width: 80px;
+        height: 80px;
+        margin-right: 10px;
+        border-radius: 30%;
+    }
+    .category-content {
+        padding: 10px;
+    }
+    .category-content a {
+        display: block;
+        padding: 8px 12px;
+        color: #606c38;
+        text-decoration: none;
+        background-color: #fefae0;
+        border-radius: 4px;
+        margin-bottom: 5px;
+        transition: background-color 0.3s;
+    }
+    .category-content a:hover {
+        background-color: #bdb826;
+        color: #fefae0;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>პროფესიები კატეგორიების მიხედვით</h1>
+
+        <div class="category">
+            <div class="category-title">
+                <img src="../static/images/360_F_329217426_NIC7VejNYh1EPRAZyJaA1I41H1DjXBnl.jpg" alt="სამეცნიერო">
+                სამეცნიერო
+            </div>
+            <div class="category-content">
+                <a href="#">ასტრონომი</a>
+                <a href="#">ბიოლოგი</a>
+                <a href="#">ქიმიკოსი</a>
+                <a href="#">ფიზიკოსი</a>
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="category-title">
+                <img src="../static/images/1000_F_833230778_I7grFbPCnpd87Vss61Xm0hmnAR9eaBC5.jpg" alt="ხელოვნება">
+                ხელოვნება
+            </div>
+            <div class="category-content">
+                <a href="#">მხატვარი</a>
+                <a href="#">მსახიობი</a>
+                <a href="#">მუსიკოსი</a>
+                <a href="#">რეჟისორი</a>
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="category-title">
+                <img src="../static/images/1000_F_718105197_fFPKMr9TbiQ9CqMQONsJzSLOyJS7Sccm.jpg" alt="სამედიცინო">
+                სამედიცინო
+            </div>
+            <div class="category-content">
+                <a href="medicine">ექიმი</a>
+                <a href="#">სტომატოლოგი</a>
+                <a href="#">ფარმაცევტი</a>
+                <a href="#">საექთნო</a>
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="category-title">
+                <img src="../static/images/240_F_535348383_NrT5Pc5bTOz9KWqqUbmUKAt1zTJiOui9.jpg" alt="ტექნიკური">
+                ტექნიკური
+            </div>
+            <div class="category-content">
+                <a href="#">ინჟინერი</a>
+                <a href="compsci">პროგრამისტი</a>
+                <a href="#">არქიტექტორი</a>
+                <a href="#">მექანიკოსი</a>
+            </div>
+        </div>
+
+        <div class="category">
+            <div class="category-title">
+                <img src="../static/images/1000_F_291353720_OtMlTfgDYU9fbPBJO13L1vt1rtsEESUS.jpg" alt="განათლება">
+                განათლება
+            </div>
+            <div class="category-content">
+                <a href="teaching">მასწავლებელი</a>
+                <a href="#">ლექტორი</a>
+                <a href="#">სკოლის დირექტორი</a>
+                <a href="#">განვითარების სპეციალისტი</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

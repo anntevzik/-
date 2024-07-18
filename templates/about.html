@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            background-color: #fefae0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .carousel {
+            width: 80%;
+            max-width: 100000px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .carousel-inner {
+            display: flex;
+            width: 800%;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-inner img {
+            width: 12.5%;
+            height: auto;
+        }
+
+        .carousel-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .carousel-button {
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .carousel-button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="carousel">
+        <div class="carousel-inner">
+            <img src="../static/images/Copy of College Interview Tips by Slidesgo.png" alt="Image 1">
+            <img src="../static/images/Copy of College Interview Tips by Slidesgo (1).png" alt="Image 2">
+            <img src="../static/images/Copy of College Interview Tips by Slidesgo (2).png" alt="Image 3">
+            <img src="../static/images/Copy of College Interview Tips by Slidesgo (3).png" alt="Image 4">
+            <img src="../static/images/Copy of College Interview Tips by Slidesgo (4).png" alt="Image 5">
+            <img src="../static/images/Copy of College Interview Tips by Slidesgo (5).png" alt="Image 6">
+            <img src="../static/images/Copy of College Interview Tips by Slidesgo (6).png" alt="Image 7">
+            <img src="../static/images/Copy of College Interview Tips by Slidesgo (7).png" alt="Image 8">
+        </div>
+        <div class="carousel-buttons">
+            <button class="carousel-button" onclick="prevSlide()">&#10094;</button>
+            <button class="carousel-button" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            const carouselInner = document.querySelector('.carousel-inner');
+            const totalSlides = document.querySelectorAll('.carousel-inner img').length;
+            if (index >= totalSlides) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = totalSlides - 1;
+            } else {
+                currentSlide = index;
+            }
+            const offset = -currentSlide * 100 / totalSlides;
+            carouselInner.style.transform = `translateX(${offset}%)`;
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+    </script>
+</body>
+</html>

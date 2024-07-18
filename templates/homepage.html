@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+{% block content %}
+<style>
+  .carousel-item video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+</style>
+<div class="carousel-inner">
+  <div class="carousel-item active">
+    <video autoplay muted loop>
+      <source src="../static/images/carousel_video.mp4" type="video/mp4">
+    </video>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #fefae0;
+  }
+
+  h1 {
+    text-align: center;
+    margin: 40px 0;
+    color: #283618;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .card {
+    background-color: #283618;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: calc(33.333% - 20px);
+    box-sizing: border-box;
+    transition: transform 0.2s;
+    flex: 1 0 300px;
+    max-width: 300px;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .card-content {
+    padding: 15px;
+  }
+
+  .card-title {
+    font-size: 1.2em;
+    margin: 0 0 10px;
+    color: #dda15e;
+  }
+
+  .card-description {
+    font-size: 0.9em;
+    color: #dda15e;
+    margin: 0;
+  }
+
+  .more-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .more-button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fefae0;
+    background-color: #283618;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.2s, transform 0.2s;
+    font-size: 1.5em;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .more-button:hover {
+    background-color: #606c38;
+    transform: scale(1.1);
+  }
+</style>
+
+<body>
+  <h1>პროფესიები</h1>
+  <div class="container">
+    {% for profession in professions %}
+    <div class="card">
+      <img src="{{ profession.image_url }}" alt="{{ profession.name }}">
+      <div class="card-content">
+        <h2 class="card-title">{{ profession.name }}</h2>
+        <p class="card-description">{{ profession.text }}</p>
+        <a href="/edit_profession/{{ profession.id }}" class="btn btn-primary ab-2">შეცვლა</a>
+        <a href="/delete_profession/{{ profession.id }}" class="btn btn-primary ab-2">წაშლა</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="more-button-container">
+    <a href="all_professions" class="more-button">→</a>
+  </div>
+
+  <h1>უნ­ივ­ერ­სი­ტეტე­ბი</h1>
+  <div class="container">
+    {% for university in universities %}
+    <div class="card">
+      <img src="{{ university.image_url }}" alt="{{ university.name }}">
+      <div class="card-content">
+        <h2 class="card-title">{{ university.name }}</h2>
+        <p class="card-description">{{ university.text }}</p>
+        <a href="/edit_university/{{ university.id }}" class="btn btn-primary ab-2">შეცვლა</a>
+        <a href="/delete_university/{{ university.id }}" class="btn btn-primary ab-2">წაშლა</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+  <div class="more-button-container">
+    <a href="all_universities" class="more-button">→</a>
+  </div>
+</body>
+{% endblock %}

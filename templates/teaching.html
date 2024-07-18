@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teaching Majors in Georgian Universities</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FEFAE0; /* Light beige background */
+            margin: 0;
+            padding-top: 100px; /* Adjust according to your header height */
+        }
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: calc(100vh - 200px); /* Adjust according to header and footer heights */
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            max-width: 900px;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #FEFAE0;
+            margin: 20px;
+        }
+        .text-container {
+            padding: 40px;
+            text-align: center;
+        }
+        .text-container h1 {
+            color: #283618; /* Dark green text */
+            margin-bottom: 20px;
+        }
+        .text-container p {
+            color: #606c38; /* Olive green text */
+            line-height: 1.6;
+        }
+        .text-container .highlight {
+            color: #283618; /* Dark green text */
+            font-weight: bold;
+        }
+        .image-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+        .image-container img {
+            width: 100%;
+            max-width: 640px;
+            aspect-ratio: 16 / 9; /* 16:9 aspect ratio */
+            border-radius: 10px;
+        }
+        .university-list {
+            margin-top: 40px;
+            padding: 20px;
+            background-color: #FEFAE0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .university-list h2 {
+            color: #283618; /* Dark green text */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .university-item {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .university-item:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="container">
+            <div class="text-container">
+                <h1>მასწავლებლობა</h1>
+                <p>განათლების სისტემაში პიროვნება, რომელიც სწავლის პროცესში დახმარებას უწევს, რჩევებს აძლევს მოსწავლეს და მის აღზრდაში მასწავლებელს უდიდესი როლი მიუძღვის.
+                    თანამედროვე პედაგოგიკაში განათლების პრობლემები წყდება ადამიანის ფილოსოფიური კონცეფციების, სოციალურ-ფსიქოლოგიური და ფსიქო-ფიზიოლოგიური გამოკვლევების საფუძველზე.
+                    აქ არის რამდენიმე უნივერსიტეტი საქართველოში, რომლებიც ცნობილია პედაგოგიკის პროგრამებით:
+                </p>
+            </div>
+            <div class="image-container">
+                <img src="../static/images/240_F_89370392_Cxskq8l4XCo9d7Hy2UHgh9OcUYwVy4c1.jpg" alt="Computer Science Image">
+            </div>
+            <div class="university-list">
+                <h2>საქართველოს უნივერსიტეტები</h2>
+                <div class="university-item">
+                    <h3>ილიას სახელმწიფო უნივერსიტეტი</h3>
+                    <p>გთავაზობთ მრავალფეროვან საგანმანათლებლო პროგრამებს და ცნობილია თავისი ინოვაციური სასწავლო მეთოდებით და კვლევითი შესაძლებლობებით.</p>
+                </div>
+                <div class="university-item">
+                    <h3>თბილისის სახელმწიფო უნივერსიტეტი</h3>
+                    <p>უზრუნველყოფს მრავალფეროვან საგანმანათლებლო პროგრამებს, განსაკუთრებული აქცენტით პედაგოგიურ მეცნიერებებზე, და ძლიერი რეპუტაციით პედაგოგიური განათლების სფეროში.</p>
+                </div>
+                <div class="university-item">
+                    <h3>კავკასიის უნივერსიტეტი</h3>
+                    <p>გთავაზობთ სპეციალიზებულ პროგრამებს განათლებაში, აქცენტით თანამედროვე სწავლების მეთოდოლოგიებსა და პრაქტიკულ ტრენინგებზე.
+                    </p>
+                </div>
+                <div class="university-item">
+                    <h3>საქართველოს ტექნიკური უნივერსიტეტი</h3>
+                    <p>ცნობილია მრავალფეროვანი საგანმანათლებლო პროგრამებით, მათ შორის იმ პროგრამებით, რომლებიც მიზნად ისახავს მომავალი პედაგოგების მომზადებას სხვადასხვა ტექნიკურ და სამეცნიერო სფეროებში.</p>
+                </div>
+                <div class="university-item">
+                    <h3>საქართველოს უნივერსიტეტი</h3>
+                    <p>ზრუნველყოფს მძლავრი პროგრამებით განათლებაში, აქცენტით როგორც თეორიულ ცოდნას, ასევე პრაქტიკულ სასწავლო უნარებზე.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}
